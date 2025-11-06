@@ -127,3 +127,26 @@ password.addEventListener('input', () => { // arrow function to call multiple fu
 });
 confirmPassword.addEventListener('input', validateConfirmPassword); // arrow function to call validateConfirmPassword
 // Form submit event listener
+
+// submit handler // validate all fields // show alert on success or failure // focus first invalid field on failure for better UX
+// MDN preventDefault: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+// ref: W3Schools JavaScript Form Validation: https://www.w3schools.com/js/js_validation.asp
+// Form submit event listener
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); // MDN preventDefault: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+
+  const okUser = validateUsername(); // validate username
+  const okEmail = validateEmail(); // validate email
+  const okPass = validatePassword(); // validate password
+  const okConfirm = validateConfirmPassword(); // validate confirm password
+
+  if (!(okUser && okEmail && okPass && okConfirm)) {
+    alert('Please fix the errors and try again.');
+    // Focus first invalid field for better UX
+    const firstBad = [username, email, password, confirmPassword].find(el => !el.checkValidity());
+    (firstBad || username).focus();
+    return;
+  }
+
+  alert('Registration successful!');
+});
