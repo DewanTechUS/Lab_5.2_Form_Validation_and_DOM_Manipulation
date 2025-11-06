@@ -138,20 +138,24 @@ form.addEventListener('submit', (e) => {
   const okEmail = validateEmail();
   const okPass = validatePassword();
   const okConfirm = validateConfirmPassword();
-
-  if (!(okUser && okEmail && okPass && okConfirm)) {
-    alert('Please fix the errors and try again.');
-    const firstBad = [username, email, password, confirmPassword].find(el => !el.checkValidity());
-    (firstBad || username).focus();
+// If any field is invalid, show alert and focus first invalid field
+ //ref: W3Schools JavaScript Form Validation: https://www.w3schools.com/js/js_validation.asp
+ //ref: MDN Client-side form validation https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+ //ref: MDN Constraint Validation API https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation
+  if (!(okUser && okEmail && okPass && okConfirm)) { // If any validation failed
+    alert('Please fix the errors and try again.'); // Show alert
+    const firstBad = [username, email, password, confirmPassword].find(el => !el.checkValidity()); // Find first invalid field
+    (firstBad || username).focus(); // Focus it (default to username if none found)
     return;
-  }
-
+  } // End if invalid
+// On success, save username to localStorage
   try {
     localStorage.setItem(STORAGE_KEY, username.value.trim());
   } catch {}
-
+// Ignore storage errors for this lab
   alert('Registration successful! (Username saved)');
-
+// Show success alert
   form.reset();
   [username, email, password, confirmPassword].forEach(el => el.classList.remove('valid'));
-});
+}); // Reset form and clear valid classes
+// Clear valid classes from all inputs
