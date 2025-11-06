@@ -52,4 +52,18 @@ function showError(inputEl, errorEl, message) { // input element, error message 
   }
 }
  
-
+//username rules
+// 6–20 chars, letters/numbers/_ only  (regex ^\w+$)
+// Test regex: https://regex101.com/
+// Validate username function // returns true if valid, false if not // shows error message if invalid // uses showError function // called on input event and form submit 
+// Username validation function
+function validateUsername() { // returns true if valid, false if not
+  const val = username.value.trim();
+  let msg = '';
+  if (!val) msg = 'Username is required.'; // required check
+  else if (val.length < 6) msg = 'Username must be at least 6 characters.'; // length checks
+  else if (val.length > 20) msg = 'Username must be 20 characters or fewer.'; // length checks
+  else if (!/^\w+$/.test(val)) msg = 'Use letters, numbers, and underscores only.'; // regex test
+  showError(username, usernameError, msg);
+  return !msg;
+}
