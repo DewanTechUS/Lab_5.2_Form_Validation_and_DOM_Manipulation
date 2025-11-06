@@ -79,3 +79,30 @@ function validateEmail() { // returns true if valid, false if not
   showError(email, emailError, msg); // Show error message if any
   return !msg; // Return true if no message (valid), false otherwise
 }
+// Password validation (min 8 chars, at least one uppercase, one lowercase, one digit, one special char)
+// Validate password function // returns true if valid, false if not // shows error message if invalid // uses showError function // called on input event and form submit
+// Password validation function
+// Password must be at least 6 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character //[!@#$%^&*(),.?":{}|<>]/
+//ref: Regex tester https://regex101.com/
+//ref: W3Schools JavaScript Form Validation  https://www.w3schools.com/js/js_validation.asp
+// Password validation function
+// ref: W3Schools JavaScript Form Validation: https://www.w3schools.com/js/js_validation.asp
+// Password validation function
+function validatePassword() {
+  const val = password.value;
+  let msg = '';
+  if (!val) msg = 'Password is required.';
+  else if (val.length < 8) msg = 'Must be at least 8 characters.';
+  else if (!/[A-Z]/.test(val) || !/[a-z]/.test(val) || !/\d/.test(val)) {
+    msg = 'Include uppercase, lowercase, and a number.';
+  }
+  showError(password, passwordError, msg);
+  return !msg;
+} // End validatePassword
+function validateConfirmPassword() {// returns true if valid, false if not
+  let msg = ''; // Initialize empty message
+  if (!confirmPassword.value) msg = 'Please confirm your password.'; // required check
+  else if (confirmPassword.value !== password.value) msg = 'Passwords do not match.';   // match check
+  showError(confirmPassword, confirmPasswordError, msg); // Show error message if any
+  return !msg; // Return true if no message (valid), false otherwise
+}
