@@ -132,22 +132,34 @@ confirmPassword.addEventListener('input', validateConfirmPassword); // arrow fun
 // MDN preventDefault: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
 // ref: W3Schools JavaScript Form Validation: https://www.w3schools.com/js/js_validation.asp
 // Form submit event listener
+// Commit 10: on success, save username + reset + clear green borders
 form.addEventListener('submit', (e) => {
-  e.preventDefault(); // MDN preventDefault: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+  e.preventDefault();
+// Prevent default form submission behavior
 
-  const okUser = validateUsername(); // validate username
-  const okEmail = validateEmail(); // validate email
-  const okPass = validatePassword(); // validate password
-  const okConfirm = validateConfirmPassword(); // validate confirm password
+// Validate all fields
+//re f: W3Schools JavaScript Form Validation: https://www.w3schools.com/js/js_validation.asp
+//ref: MDN Client-side form validation https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+//ref: MDN Constraint Validation API https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation
+// Call validation functions for all fields
+  const okUser = validateUsername();
+  const okEmail = validateEmail();
+  const okPass = validatePassword();
+  const okConfirm = validateConfirmPassword();
 
   if (!(okUser && okEmail && okPass && okConfirm)) {
     alert('Please fix the errors and try again.');
-    // Focus first invalid field for better UX
-    // find first invalid input element
-    const firstBad = [username, email, password, confirmPassword].find(el => !el.checkValidity()); // find first invalid input
-    (firstBad || username).focus(); // focus it or username as fallback
-    return; // stop submission
-  } // All validations passed
+    const firstBad = [username, email, password, confirmPassword].find(el => !el.checkValidity());
+    (firstBad || username).focus();
+    return;
+  }
 
-  alert('Registration successful!');
+  try {
+    localStorage.setItem(STORAGE_KEY, username.value.trim());
+  } catch {}
+
+  alert('Registration successful! (Username saved)');
+
+  form.reset();
+  [username, email, password, confirmPassword].forEach(el => el.classList.remove('valid'));
 });
