@@ -38,20 +38,20 @@ try {
 // Constraint Validation API: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation
 // ref: W3Schools JavaScript Form Validation: https://www.w3schools.com/js/js_validation.asp
 // Input event listeners for real-time validation feedback
-username.addEventListener('input', () => {
+// Function to show or clear error messages and set valid class
 function showError(inputEl, errorEl, message) { // input element, error message span element, message string
   errorEl.textContent = message || ''; // Set the error message text or clear it if no message
      if (message) { // If there's an error message
     inputEl.classList.remove('valid');
-
-  } else if (inputEl.checkValidity()) { // If input is valid
+        
+} else if (inputEl.checkValidity()) { 
     inputEl.classList.add('valid');
-    
-} else { // If input is invalid but no message
+    // If input is invalid but no message
+} else { 
     inputEl.classList.remove('valid'); // Remove valid class if input is invalid
   }
 }
- 
+
 //username rules
 // 6–20 chars, letters/numbers/_ only  (regex ^\w+$)
 // Test regex: https://regex101.com/
@@ -93,7 +93,7 @@ function validatePassword() {
   let msg = '';
   if (!val) msg = 'Password is required.';
   else if (val.length < 8) msg = 'Must be at least 8 characters.';
-  else if (!/[A-Z]/.test(val) || !/[a-z]/.test(val) || !/\d/.test(val)) {
+  else if (!/[A-Z]/.test(val) || !/[a-z]/.test(val) || !/\d/.test(val)) { // checks for uppercase, lowercase, digit
     msg = 'Include uppercase, lowercase, and a number.';
   }
   showError(password, passwordError, msg);
@@ -107,14 +107,6 @@ function validateConfirmPassword() {// returns true if valid, false if not
   return !msg; // Return true if no message (valid), false otherwise
 }
 
-// Confirm password must match password
-function validateConfirmPassword() {
-  let msg = '';
-  if (!confirmPassword.value) msg = 'Please confirm your password.'; // required check
-  else if (confirmPassword.value !== password.value) msg = 'Passwords do not match.';   // match check
-  showError(confirmPassword, confirmPasswordError, msg); // Show error message if any
-  return !msg; // Return true if no message (valid), false otherwise
-}
 // Input event listeners for real-time validation feedback
 // live validation while typing
 // MDN input event: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
