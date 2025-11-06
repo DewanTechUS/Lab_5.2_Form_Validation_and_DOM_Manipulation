@@ -5,6 +5,8 @@
 // Get form and input elements by their IDs that i assigned in HTML file or was assigned from lesson 
 // Get the form element
 // Form element // form with id registrationForm // input elements and error message spans // inputs: username, email, password, confirmPassword // spans: usernameError, emailError, passwordError, confirmPasswordError 
+'use strict'; // Strict mode helps prevent errors by enforcing safer JavaScript rules. // It catches common coding mistakes and "unsafe" actions, making debugging easier. //lesson
+
 const form = document.getElementById('registrationForm');
 
 const username = document.getElementById('username'); // input 
