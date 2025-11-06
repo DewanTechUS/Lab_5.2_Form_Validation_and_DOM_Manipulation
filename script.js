@@ -17,7 +17,24 @@ const usernameError = document.getElementById('usernameError'); // span for erro
  const passwordError = document.getElementById('passwordError'); // span for error message
  const confirmPassword = document.getElementById('confirmPassword'); // input
  const confirmPasswordError = document.getElementById('confirmPasswordError'); // span for error message
+// MDN is my friend
+// References
+// localStorage (main document) https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+// Web Storage API Overview https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
+// localStorage.setItem() https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem
+// localStorage.getItem() https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem
+// localStorage.removeItem() https://developer.mozilla.org/en-US/docs/Web/API/Storage/removeItem
+// Try/Catch Error Handling https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
+// JSON stringify & parse used often with storage https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
+// MDN localStorage: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+const STORAGE_KEY = 'irf.username';
 
+try {
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) username.value = saved;
+} catch {
+  // ignore storage errors for this lab
+}
 
  
 
