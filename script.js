@@ -143,10 +143,11 @@ form.addEventListener('submit', (e) => {
   if (!(okUser && okEmail && okPass && okConfirm)) {
     alert('Please fix the errors and try again.');
     // Focus first invalid field for better UX
-    const firstBad = [username, email, password, confirmPassword].find(el => !el.checkValidity());
-    (firstBad || username).focus();
-    return;
-  }
+    // find first invalid input element
+    const firstBad = [username, email, password, confirmPassword].find(el => !el.checkValidity()); // find first invalid input
+    (firstBad || username).focus(); // focus it or username as fallback
+    return; // stop submission
+  } // All validations passed
 
   alert('Registration successful!');
 });
