@@ -80,4 +80,13 @@ Each message was short, specific, and shown right below the corresponding input,
 - MDN — Window.sessionStorage | https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 - JSON stringify / parse - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
 - Regex Testing Tool - https://regex101.com/ 
-- YouTube — Form Validation Explanation | https://www.youtube.com/watch?v=rsd4FNGTRBw
+- YouTube — Form Validation Explanation | https://www.youtube.com/watch?v=
+
+# Special Thanks
+
+I would like to express my appreciation to Per Scholas and the Software Engineering Training Team for their support throughout this project.
+
+Special thanks to: 
+- Tishana Trainor — Instructor 
+- Bryan Santos — Instructor
+- My Cohort Classmates — For collaboration, encouragement, and sharing knowledge & resources
