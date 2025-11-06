@@ -106,3 +106,12 @@ function validateConfirmPassword() {// returns true if valid, false if not
   showError(confirmPassword, confirmPasswordError, msg); // Show error message if any
   return !msg; // Return true if no message (valid), false otherwise
 }
+
+// Confirm password must match password
+function validateConfirmPassword() {
+  let msg = '';
+  if (!confirmPassword.value) msg = 'Please confirm your password.'; // required check
+  else if (confirmPassword.value !== password.value) msg = 'Passwords do not match.';   // match check
+  showError(confirmPassword, confirmPasswordError, msg); // Show error message if any
+  return !msg; // Return true if no message (valid), false otherwise
+}
