@@ -33,8 +33,23 @@ try {
   const saved = localStorage.getItem(STORAGE_KEY);
   if (saved) username.value = saved;
 } catch {
-  // ignore storage errors for this lab
+  // ignore storage errors for this lab read lesson // i am testing //console.error('Error accessing localStorage', e);
 }
+// Constraint Validation API: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation
+// ref: W3Schools JavaScript Form Validation: https://www.w3schools.com/js/js_validation.asp
+// Input event listeners for real-time validation feedback
+username.addEventListener('input', () => {
+function showError(inputEl, errorEl, message) { // input element, error message span element, message string
+  errorEl.textContent = message || ''; // Set the error message text or clear it if no message
+     if (message) { // If there's an error message
+    inputEl.classList.remove('valid');
 
+  } else if (inputEl.checkValidity()) { // If input is valid
+    inputEl.classList.add('valid');
+    
+} else { // If input is invalid but no message
+    inputEl.classList.remove('valid'); // Remove valid class if input is invalid
+  }
+}
  
 
