@@ -67,3 +67,15 @@ function validateUsername() { // returns true if valid, false if not
   showError(username, usernameError, msg);
   return !msg;
 }
+ //lesson//email validation (uses input[type="email"] built-in checks)
+ // Validate email function // returns true if valid, false if not // shows error message if invalid // uses showError function // called on input event and form submit
+ //ref: MDN Client-side form validation https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+ //ref: MDN Constraint Validation API https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation
+ // Email validation function
+function validateEmail() { // returns true if valid, false if not
+  let msg = ''; // Initialize empty message
+  if (email.validity.valueMissing) msg = 'Email is required.';// required check
+  else if (email.validity.typeMismatch) msg = 'Enter a valid email (e.g., name@example.com).'; // type check
+  showError(email, emailError, msg); // Show error message if any
+  return !msg; // Return true if no message (valid), false otherwise
+}
