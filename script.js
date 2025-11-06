@@ -115,3 +115,15 @@ function validateConfirmPassword() {
   showError(confirmPassword, confirmPasswordError, msg); // Show error message if any
   return !msg; // Return true if no message (valid), false otherwise
 }
+// Input event listeners for real-time validation feedback
+// live validation while typing
+// MDN input event: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
+// MDN getElementById: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+username.addEventListener('input', validateUsername); // arrow function to call validateUsername
+email.addEventListener('input', validateEmail); // arrow function to call validateEmail
+password.addEventListener('input', () => { // arrow function to call multiple functions
+  validatePassword(); // validate password
+  validateConfirmPassword(); // also validate confirm password in case password changed
+});
+confirmPassword.addEventListener('input', validateConfirmPassword); // arrow function to call validateConfirmPassword
+// Form submit event listener
