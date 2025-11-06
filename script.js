@@ -98,7 +98,7 @@ function validatePassword() {
   }
   showError(password, passwordError, msg);
   return !msg;
-} // End validatePassword
+} // End validatePassword 
 function validateConfirmPassword() {// returns true if valid, false if not
   let msg = ''; // Initialize empty message
   if (!confirmPassword.value) msg = 'Please confirm your password.'; // required check
