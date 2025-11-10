@@ -7,3 +7,4 @@
 // MDN: input event  https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
 //  W3Schools: JavaScript Form Validation  https://www.w3schools.com/js/js_validation.asp
 //  Regex tester  https://regex101.com/
+//  CSS Background Effects  https://prismic.io/blog/css-background-effects
