@@ -1,4 +1,4 @@
-# Lab 5.2 — Form Validation and DOM Manipulation (Interactive Registration Form)
+# Lab 5.2 - Form Validation and DOM Manipulation (Interactive Registration Form)
 
 **Author:**  
 Name: **Dewan Farhad Mahmud (Rocky)**  
@@ -83,10 +83,9 @@ Each message was short, specific, and shown right below the corresponding input,
 - YouTube — Form Validation Explanation | https://www.youtube.com/watch?v=
 
 # Special Thanks
-
 I would like to express my appreciation to Per Scholas and the Software Engineering Training Team for their support throughout this project.
 
 Special thanks to: 
-- Tishana Trainor — Instructor 
-- Bryan Santos — Instructor
-- My Cohort Classmates — For collaboration, encouragement, and sharing knowledge & resources
+- Tishana Trainor - Instructor 
+- Bryan Santos - Instructor
+- My Cohort Classmates - For collaboration, encouragement, and sharing knowledge & resources
