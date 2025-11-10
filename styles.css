@@ -16,7 +16,7 @@ body {
 }
  
 .container {
-  background: rgba(255, 255, 255, 0.50);
+  background: rgba(255, 255, 255, 0.40);
   padding: 20px 30px;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -25,9 +25,18 @@ body {
 }
 
 h1 {
+  font-size: 1.4rem;
+  border: 2px solid #0078d7;
+  color: #ffffff; 
+  background-color: hsl(0, 91%, 52%); 
+  padding: 10px 20px;
+  border-radius: 16px;
   text-align: center;
-  color: #333;
+  width: fit-content;
+  margin: 20px auto; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
+
  
 .form-group {
   margin-bottom: 15px;
@@ -261,14 +270,8 @@ h2 {
   transform: translateY(-5px);
   box-shadow: 0 0 45px rgba(0, 191, 255, 0.8);
 }
-h1 {
-  text-align: center;
-  color: #000000;
-  text-shadow: #000000 1px 1px 2px;
-  border: 2px solid #0078d7;
-  padding: 10px;
- border-radius: 8px;
-}
+
+
 
 
 @keyframes gradient {
@@ -361,9 +364,15 @@ h1 {
     font-size: 0.95rem;
   }
 
-  h1 {
-    font-size: 1.4rem;
-  }
+h1 {
+  font-size: 1.4rem;
+  border: 2px solid #0078d7;
+  color: #000000;
+  background-color: hsl(0, 100%, 44%); 
+  padding: 10px;
+  border-radius: 16px; 
+}
+
 
   h2 {
     font-size: 1.1rem;
