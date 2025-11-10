@@ -69,23 +69,23 @@ Each message was short, specific, and shown right below the corresponding input,
 - How to save and retrieve values in `localStorage`.
 
 # Helpful References (Used While Learning)
-- MDN — document.getElementById | https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById 
-- MDN — input event | https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event 
-- MDN — Constraint Validation API | https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation 
-- MDN — Client-side Form Validation | https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation 
-- MDN — HTML attribute: pattern | https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern 
+- MDN - document.getElementById | https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById 
+- MDN - input event | https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event 
+- MDN - Constraint Validation API | https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation 
+- MDN - Client-side Form Validation | https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation 
+- MDN - HTML attribute: pattern | https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern 
 - W3Schools — JavaScript Form Validation | https://www.w3schools.com/js/js_validation.asp 
-- MDN — Web Storage API Overview | https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
-- MDN — Window.localStorage | https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage 
-- MDN — Window.sessionStorage | https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+- MDN - Web Storage API Overview | https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
+- MDN - Window.localStorage | https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage 
+- MDN - Window.sessionStorage | https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 - JSON stringify / parse - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
 - Regex Testing Tool - https://regex101.com/ 
-- YouTube — Form Validation Explanation | https://www.youtube.com/watch?v=
+- YouTube - Form Validation Explanation | https://www.youtube.com/watch?v=
 
 # Special Thanks
 I would like to express my appreciation to Per Scholas and the Software Engineering Training Team for their support throughout this project.
 
-Special thanks to: 
+# Special thanks to: 
 - Tishana Trainor - Instructor 
 - Bryan Santos - Instructor
 - My Cohort Classmates - For collaboration, encouragement, and sharing knowledge & resources
